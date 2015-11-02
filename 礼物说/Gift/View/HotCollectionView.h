@@ -2,8 +2,8 @@
 //  ColectionView.h
 //  礼物说
 //
-//  Created by qianfeng on 15/10/11.
-//  Copyright (c) 2015年 孟璐. All rights reserved.
+//  Created by qianfeng on 14/10/11.
+//  Copyright (c) 2014年 zhangying. All rights reserved.
 //  热门礼物
 
 #import <UIKit/UIKit.h>

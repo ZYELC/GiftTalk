@@ -2,8 +2,8 @@
 //  TitleCell.h
 //  礼物说
 //
-//  Created by qianfeng on 15/10/9.
-//  Copyright (c) 2015年 孟璐. All rights reserved.
+//  Created by qianfeng on 14/10/9.
+//  Copyright (c) 2014年 zhangying. All rights reserved.
 //  美好小物
 
 #import <UIKit/UIKit.h>
