@@ -1,0 +1,86 @@
+// 屏幕宽高
+#define MLScreenW [UIScreen mainScreen].bounds.size.width
+#define MLScreenH [UIScreen mainScreen].bounds.size.height
+
+// 存储版本键
+#define MLSaveVersion @"saveVersion"
+// 网络状态键
+#define MLIsNetWork @"isNetWork"
+// 动画时间
+#define kDURATION 0.3
+
+#define ShowNight @"showNight"
+
+// 图片
+#define MLImage(name) [UIImage imageNamed:name]
+// JSON解析
+#define MLJsonParserWithData(data) [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]
+
+// 颜色
+#define MLColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define MLColorRGBA(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
+
+#define MLBackColor MLColor(235, 235, 241);
+// 随机色
+#define MLRandomColor MLColor(arc4random_uniform(256),arc4random_uniform(256),arc4random_uniform(256))
+
+// 字体
+#define MLFont(size) [UIFont systemFontOfSize:size]
+
+// 常用头文件
+#import "UIView+Extension.h"
+#import "MLTool.h"
+#import "MLButton.h"
+#import "AFNetworking.h"
+#import "UIImageView+WebCache.h"
+#import "UIButton+WebCache.h"
+#import "MJRefresh.h"
+#import "MJChiBaoZiFooter.h"
+#import "MJChiBaoZiHeader.h"
+#import "Viewer.h"
+#import "MBProgressHUD.h"
+#import "Helper.h"
+
+// 日志输出 由于NSLog操作是非常耗时的，而当程序发布后，也不需要输出操作.
+// 程序的调试阶段DEBUG宏会一直存在.所以调试阶段会输出,发布后没有输出.
+#ifdef DEBUG
+#define MLLog(...) NSLog(__VA_ARGS__)
+#else
+#define MLLog(...)
+#endif
+
+// 所有借口
+// 横幅
+#define BANNERURL @"http://api.liwushuo.com/v1/banners?channel=iOS"
+// 推荐
+#define PROMOTIONURL @"http://api.liwushuo.com/v2/promotions"
+
+// 精选攻略
+#define ITEMSURL @"http://api.liwushuo.com/v2/channels/104/items?"
+
+// 热门礼物
+#define HOTURL @"http://api.liwushuo.com/v1/item_channels/1/items?"
+
+// 分类专题
+#define SPECIALURL @"http://api.liwushuo.com/v1/collections?channel=104&limit=%@&offset=%@"
+
+// 专题详情
+#define SPECIALDETAIURL @"http://api.liwushuo.com/v1/collections/%@/posts?channel=104&limit=20&offset=%@"
+
+// 分类中的各种图标
+#define CHANNELURL @"http://api.liwushuo.com/v1/channel_groups/all"
+
+// 分类个类的详情
+#define CHANNELDETAILURL @"http://api.liwushuo.com/v1/channels/%@/items?channels=104&limit=20&offset=%@"
+
+// 礼物详情
+#define DETAILURL @"http://api.liwushuo.com/v2/items/%@"
+
+// 礼物评论
+#define COMMENTURL @"http://api.liwushuo.com/v2/items/%@/comments?limit=20&offset=%@"
+
+// 攻略搜索
+#define SEARCHURL @"http://api.liwushuo.com/v1/search/post?keyword=%@&limit=20&offset=%@&sort="
+
+// 礼物搜索
+#define GIFTSEARCHURL @"http://api.liwushuo.com/v1/search/item?keyword=%@&limit=20&offset=%@&sort="
